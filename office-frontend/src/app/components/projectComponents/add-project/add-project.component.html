@@ -1,0 +1,40 @@
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Open My Modal</button>
+
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add Project</h4>
+    <!--<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>-->
+  </div>
+  <div class="modal-body">
+    <!--<form class="add-form" (ngSubmit)="onSubmit()">-->
+    <div class="form-group">
+        <label for="createProjectName">Create Name</label>
+      <div class="input-group">
+        <input id="createProjectName" name="createProjectName" [(ngModel)]="createProjectName" class="form-control" placeholder="Enter Project Name">
+        <select id="createProjectType" name="createProjectType" class="form-control" [(ngModel)]="createProjectType">
+          <option value="excel">Excel</option>
+          <option value="word">Word</option>
+          <option value="notes">Notes</option>
+        </select>
+        <!--<div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+          <button class="btn btn-outline-primary mr-2" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()">Project Type</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownManual">
+              <button ngbDropdownItem>Word</button>
+              <button ngbDropdownItem>Excel</button>
+              <button ngbDropdownItem>List</button>
+            </div>
+        </div>-->
+      </div>
+    </div>
+    <!--</form>-->
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.dismiss('Cross click')">Cancel</button>
+    <!--<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Create</button>-->
+    <button type="Submit" class="btn btn-outline-dark" (click)="onSubmit()">Create</button>
+    <!--<input type="submit" value="Save Project" class="btn btn-block">-->
+  </div>
+</ng-template>
