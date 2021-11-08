@@ -45,9 +45,11 @@ export class AddProjectComponent implements OnInit {
     //console.log(this.createProjectType);
     //this.modalService.dismissAll;
     const newProject = {
-      name: this.createProjectName,
-      type: this.createProjectType,
-      lastUpdated: 'Now'
+      UserId: 1,
+      projectName: this.createProjectName,
+      projectType: this.createProjectType,
+      creationDate: 'Now',
+      modifiedDate: 'Now'
     };
     //console.log(newProject);
     this.createProjectName="";

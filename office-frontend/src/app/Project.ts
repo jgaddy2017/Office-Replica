@@ -1,6 +1,8 @@
 export interface Project {
-  id?: number;
-  name: string;
-  type: string;
-  lastUpdated: string;
+  Id?: number;
+  UserId?: number;
+  projectName: string;
+  projectType: string;
+  creationDate: string;
+  modifiedDate: string;
 }
