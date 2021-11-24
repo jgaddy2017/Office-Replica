@@ -1,0 +1,9 @@
+
+<app-user-login *ngIf="showCreateLogin"></app-user-login>
+<app-create-login *ngIf="!showCreateLogin" (createUser)="createUser($event)"></app-create-login>
+<app-toggle-create-login
+        (btnClick)="changeShowTask()"
+        text="{{showCreateLogin ? 'Create User' : 'Back to Log In'}}">
+</app-toggle-create-login>
+
+<a routerLink="projects">Sign In</a>

@@ -60,7 +60,8 @@ namespace office_backend
                     builder =>
                     {
                         builder.WithOrigins("http://localhost:4200",
-                                            "http://localhost:44327/api/project")
+                                            "http://localhost:44327/api/project",
+                                            "*")
                                 .AllowAnyHeader();
                     });
             });

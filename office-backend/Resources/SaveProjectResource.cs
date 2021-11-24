@@ -10,6 +10,6 @@ namespace office_backend.Resources
     {
         public string ProjectName { get; set; }
         public string ProjectType { get; set; } 
-        public int UserId { get; set; }
+        public string UserId { get; set; }
     }
 }

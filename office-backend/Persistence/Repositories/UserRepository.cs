@@ -15,10 +15,15 @@ namespace office_backend.Persistence.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<User> getUser(int id) {
+        public async Task<User> getUser(string id) {
             //var user = await (from u in _dbContext.Users where u.Id == id select u).ToListAsync();
-            var user = await (from u in _dbContext.Users where u.Id == id select u).FirstAsync();
+            var user = await (from u in _dbContext.Users where u.UserId == id select u).FirstAsync();
             return user;
+        }
+
+        public async Task saveUser(User user) {
+            await _dbContext.Users.AddAsync(user);
+            await _dbContext.SaveChangesAsync();
         }
             
     }

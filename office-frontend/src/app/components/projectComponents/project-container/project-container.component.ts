@@ -20,7 +20,6 @@ export class ProjectContainerComponent implements OnInit {
 
   addProject(project: Project){
     this.projects.push(project);
-    //console.log(this.projects);
     this.addProjectToDb(project);
   }
 
